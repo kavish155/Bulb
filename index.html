@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>light bulb</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <img  id="image" src="off.jpg" alt="-">
+    <button id="btn">turn on</button>
+</div>
+<script>
+    let bulb= document.getElementById('image')
+    let btn= document.getElementById('btn')
+    btn.addEventListener('click', tooglebulb)
+    function tooglebulb(e){
+        if(btn.innerText=="turn on"){
+         bulb.src="on.jpg"
+         btn.innerText="turn off"
+          }
+         else{
+            bulb.src="off.jpg"
+            btn.innerText="turn on"
+          }
+        }
+</script>
+</body>
+</html>
